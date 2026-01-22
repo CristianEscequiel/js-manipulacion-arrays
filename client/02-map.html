@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <script>
+            const todos = [
+                {todo:'realizar array', status:true},
+                {todo:'iterar utilizando forEach', status:false},
+                {todo:'guardar pagina', status:true},
+            ]
+            const app = document.getElementById('app')
+            const list = todos.map(todo => {
+                return  ` 
+                <li>
+                    <input type="checkbox" value=${todo.status}>  ${todo.todo}
+                </li>`
+            })
+
+            app.innerHTML = list.join('')
+        </script>
+    </div>
+</body>
+</html>
